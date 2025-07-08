@@ -1,5 +1,7 @@
-import server from "./server";
+import server from './server';
 
-server.listen(8000,()=>{
-    console.log('Inicio API Express')
-})
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => {
+  console.log(`Servidor backend escuchando en puerto ${PORT}`);
+});

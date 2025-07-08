@@ -1,4 +1,4 @@
-import { Column, Model, Table, DataType, AutoIncrement } from "sequelize-typescript";
+import { Column, Model, Table, DataType } from "sequelize-typescript";
 
 @Table({ tableName: 'arriendos' })
 class Arriendo extends Model {
@@ -7,10 +7,10 @@ class Arriendo extends Model {
   @Column({ type: DataType.INTEGER, primaryKey:true, field: 'id', allowNull:false, autoIncrement:true})
   declare id: number;
 
-  @Column({ type: DataType.DATE, field: 'fecha_inicio' })
+  @Column({ type: DataType.DATEONLY, field: 'fecha_inicio' })
   declare fechaInicio: Date;
 
-  @Column({ type: DataType.DATE, field: 'fecha_fin' })
+  @Column({ type: DataType.DATEONLY, field: 'fecha_fin' })
   declare fechaFin: Date;
 
   @Column({ type: DataType.STRING(6), field: 'patente_vehiculo' })

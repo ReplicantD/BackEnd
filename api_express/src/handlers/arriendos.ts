@@ -75,9 +75,9 @@ export const editarArriendo = async(request:Request,response:Response)=>{
 
 //BORRAR ARRIENDO ("borrar un arriendo (ya sea activo o innactivo")
 
-export const borrarArriendo = async(request:Request,response:Response)=>{
-    const { id } = request.params
-    const arriendo = await Arriendo.findByPk(id)
-    await arriendo.destroy()
-    response.json({data: 'Arriendo borrado'})
-}
+export const borrarArriendo = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const arriendo = await Arriendo.findByPk(id);
+  await arriendo?.destroy();
+  res.json({ data: 'Arriendo borrado' });
+};

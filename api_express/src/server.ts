@@ -1,5 +1,5 @@
 import  Express  from "express";
-import router from "./router"
+import router from "./router";
 import db from "./config/database";
 import cors,{CorsOptions} from 'cors'
 const server = Express()
